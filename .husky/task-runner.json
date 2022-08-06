@@ -1,0 +1,28 @@
+{
+   "tasks": [
+      {
+         "name": "Run dotnet-format",
+         "command": "dotnet",
+         "args": [
+            "format",
+            "style",
+            "--include",
+            "${staged}"
+         ],
+         "include": [
+            "**/*.cs"
+         ]
+      },
+      {
+         "name": "Run csharpier",
+         "command": "dotnet",
+         "args": [
+            "csharpier",
+            "${staged}"
+         ],
+         "include": [
+            "**/*.cs"
+         ]
+      }
+   ]
+}
